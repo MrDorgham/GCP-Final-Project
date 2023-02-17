@@ -12,7 +12,7 @@ This repository contains Terraform code to set up a GCP environment for a Python
 2. To preview the resources to be created, use `terraform plan`.
 3. To create the resources, run `terraform apply`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75739d25-fc78-448a-93bb-2d37355416f8/Untitled.png)
+![Alt text](/Screenshots/1.png "Optional Title")
 
 ## **Building and Uploading Docker Image**
 
@@ -20,7 +20,7 @@ This repository contains Terraform code to set up a GCP environment for a Python
 2. Tag the Docker image with `docker tag gcp-python gcr.io/careful-trainer-377212/gcp-python-app`.
 3. Upload the Docker image to Google Container Registry with `docker push gcr.io/careful-trainer-377212/gcp-python-app`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b692db97-ff9e-456b-8b6b-d6b873e0b31f/Untitled.png)
+![Alt text](/Screenshots/2.png "Optional Title")
 
 ## **SSH to Private VM**
 
@@ -31,7 +31,7 @@ This repository contains Terraform code to set up a GCP environment for a Python
 2. Authorize `gcloud` to access the Cloud Platform with your Google user credentials by running `gcloud auth login` and `gcloud auth application-default login`.
 3. Set the `gcloud` account by running `gcloud conf set account [ACCOUNT]`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1568213b-9cd2-41a5-98b3-1098f2c8b791/Untitled.png)
+![Alt text](/Screenshots/3.png "Optional Title")
 
 ## Take a Remote of the Private GKE Cluster
 
@@ -44,6 +44,13 @@ This repository contains Terraform code to set up a GCP environment for a Python
 1. Apply the Kubernetes deployment and service configurations with `kubectl create -Rf .`.
 2. Get the load balancer IP and port with `kubectl get svc`. This will provide you with the external IP address and the port of the service. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8b5fae3-8f66-4d33-bdf3-4a01b499c101/Untitled.png)
+![Alt text](/Screenshots/4.png "Optional Title")
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ca79cf8-07f0-419b-b3cd-5fb71350e586/Untitled.png)
+![Alt text](/Screenshots/5.png "Optional Title")
+
+
+## **Delete Resources Using Terraform `When needed`**
+![Alt text](/Screenshots/6.png "Optional Title")
+
+
+
