@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: gcr.io/iti-devops-366712/gcp-final-iti:v1
+          image: gcr.io/careful-trainer-377212/gcp-python-app
           ports:
             - containerPort: 8080
           env:
