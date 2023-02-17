@@ -49,7 +49,10 @@ This repository contains Terraform code to set up a GCP environment for a Python
 ![Alt text](/Screenshots/5.png "Optional Title")
 
 
-## **Delete Resources Using Terraform `When needed`**
+## **Delete Resources Using Terraform When needed**
+
+1. To delete the resources, run `terraform destroy`.
+
 ![Alt text](/Screenshots/6.png "Optional Title")
 
 
