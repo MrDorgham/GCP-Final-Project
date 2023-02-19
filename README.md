@@ -16,28 +16,34 @@ This repository contains Terraform code to set up a GCP environment for a Python
 
 ## **Building and Uploading Docker Image**
 
-1. Build the Docker image for the Python app with `docker build -t gcp-python-app .`.
-2. Tag the Docker image with `docker tag gcp-python gcr.io/careful-trainer-377212/gcp-python-app`.
-3. Upload the Docker image to Google Container Registry with `docker push gcr.io/careful-trainer-377212/gcp-python-app`.
+1. Autherized docker with `gcloud auth configure-docker`.
+2. Build the Docker image for the Python app with `docker build -t gcp-python-app .`. 
+3. Tag the Docker image with `docker tag gcp-python gcr.io/careful-trainer-377212/gcp-python-app`.
+4. Upload the Docker image to Google Container Registry with `docker push gcr.io/careful-trainer-377212/gcp-python-app`.
 
 ![Alt text](/Screenshots/2.png "Optional Title")
 
-## **SSH to Private VM**
+## **SSH to the Private VM**
 
 1. Install `kubectl` with the following commands:
     - `sudo apt-get update`.
     - `sudo apt-get install kubectl`.
     - `sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin`.
-2. Authorize `gcloud` to access the Cloud Platform with your Google user credentials by running `gcloud auth login` and `gcloud auth application-default login`.
-3. Set the `gcloud` account by running `gcloud conf set account [ACCOUNT]`.
+    
+2. Authorize `gcloud` to access the Cloud Platform with your Google user credentials
+- `gcloud auth login` and `gcloud auth application-default login`.
+
+
+3. Set the `gcloud` account 
+- `gcloud conf set account [ACCOUNT]`.
 
 ![Alt text](/Screenshots/3.png "Optional Title")
 
 ## Take a Remote of the Private GKE Cluster
 
-1. SSH to GKE with `gcloud container clusters get-credentials private-cluster --region us-east1-b --project careful-trainer-377212`.
-2. Copy the `gke_deployment_files` directory to the remote machine with `git clone <HTTP URL>` after installing `git`:
-    - `sudo apt install git`.
+1. connect to GKE with `gcloud container clusters get-credentials private-cluster --region us-east1-b --project careful-trainer-377212`.
+
+2. Copy the `gke_deployment_files` directory to the remote machine with `git clone <HTTP URL>` after installing `git`
 
 ## **Deploy to GKE**
 
